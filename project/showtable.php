@@ -29,7 +29,15 @@ require_once 'database.php';
                         <th scope="row">' . $row['ID'] . '</th>' .
                                 '<td>' . $row['name'] . '</td>' .
                                 '<td>' . $row['password'] . '</td>' .
-                                '<td>' .
+                                '<td>'
+
+                                .
+                                '<a class="btn btn-warning btn-sm" role="button "href="edit.php?userid=' .
+
+                                $row["ID"]  . '"' .
+                                '>' . 'EDIT</a>  '
+
+                                .
                                 '<a class="btn btn-danger btn-sm" role="button "href="deleteprocess.php?userid=' .
 
                                 $row["ID"]  . '"' .
