@@ -39,7 +39,7 @@ require_once 'header.php';
                         </div>
 
                         <div>
-                            <p class="mb-0">Do you have an account? <a href="#!" class="text-white-50 fw-bold">Log In</a></p>
+                            <p class="mb-0">Do you have an account? <a href="login.php" class="text-white-50 fw-bold">Log In</a></p>
                         </div>
 
                     </div>

@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once 'database.php';
 require_once 'func.php';
 require_once 'regprocess.php';
@@ -27,7 +28,9 @@ require_once 'regprocess.php';
                     <a class="nav-link " aria-current="page" href="#">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="login.php">Log In</a>
+                    <a class="nav-link" href="login.php">
+                        Log In
+                    </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="registar.php">Registration </a>

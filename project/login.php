@@ -26,7 +26,7 @@ require_once 'header.php';
                                 </div>
 
 
-                                <button class="btn btn-outline-light btn-lg px-5" type="submit">Login</button>
+                                <button class="btn btn-outline-light btn-lg px-5" type="submit" name="submit">Login</button>
 
                             </form>
 
@@ -34,7 +34,7 @@ require_once 'header.php';
                         </div>
 
                         <div>
-                            <p class="mb-0">Don't have an account? <a href="#!" class="text-white-50 fw-bold">Registration</a></p>
+                            <p class="mb-0">Don't have an account? <a href="registar.php" class="text-white-50 fw-bold">Registration</a></p>
                         </div>
 
                     </div>
