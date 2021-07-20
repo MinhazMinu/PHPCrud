@@ -40,10 +40,25 @@ require_once 'regprocess.php';
                             '</a>';
                     }
                     ?>
-                    
+
                 </li>
+
+
+
                 <li class="nav-item">
-                    <a class="nav-link" href="registar.php">Registration </a>
+                    <?php
+                    if (isset($_SESSION['sessionID'])) {
+                        echo ' <a class="nav-link" href="showtable.php">'
+                            . "Show Table" .
+                            '</a>';
+                    } else {
+                        echo ' <a class="nav-link" href="registar.php">'
+                            . "Registration" .
+                            '</a>';
+                    }
+                    ?>
+
+
                 </li>
 
             </ul>
