@@ -3,4 +3,3 @@
     {
         header("Location: registar.php?error=$mgs");
     }
-?>

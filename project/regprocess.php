@@ -25,11 +25,32 @@ if (isset($_POST['submit'])) {
         $stmt = mysqli_stmt_init($conn);
         if (!mysqli_stmt_prepare($stmt, $sql)) {
             toHeader($mgs = "mysqlError");
+            exit();
         } else {
             mysqli_stmt_bind_param($stmt, "s", $username);
             mysqli_stmt_execute($stmt);
-            mysqli_stmt_store_result();
+            mysqli_stmt_store_result($stmt);
             $rowCount = mysqli_stmt_num_rows($stmt);
+
+            if ($rowCount > 0) {
+                toHeader($mgs = "userNameTaken");
+                exit();
+            } else {
+                $sql = "INSERT INTO user(name,password) values(?,?)";
+                $stmt = mysqli_stmt_init($conn);
+                if (!mysqli_stmt_prepare($stmt, $sql)) {
+                    toHeader($mgs = "mysqlError");
+                } else {
+                    $hashPassword = password_hash($password, PASSWORD_DEFAULT);
+
+                    mysqli_stmt_bind_param($stmt, "ss", $username, $hashPassword);
+                    mysqli_stmt_execute($stmt);
+                    toHeader($mgs = "registered");
+                    exit();
+                }
+            }
         }
     }
+    mysqli_stmt_close($stmt);
+    mysqli_close($conn);
 }
