@@ -34,7 +34,7 @@ require_once 'database.php';
                                 .
                                 '<a class="btn btn-warning btn-sm" role="button "href="edit.php?userid=' .
 
-                                $row["ID"]  . '"' .
+                                $row["ID"]  . '&name=' . $row["name"] . '&password=' . $row["password"] . '"' .
                                 '>' . 'EDIT</a>  '
 
                                 .
