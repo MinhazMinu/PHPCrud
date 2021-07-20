@@ -28,9 +28,19 @@ require_once 'regprocess.php';
                     <a class="nav-link " aria-current="page" href="#">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="login.php">
-                        Log In
-                    </a>
+
+                    <?php
+                    if (isset($_SESSION['sessionID'])) {
+                        echo ' <a class="nav-link" href="logout.php">'
+                            . "Log Out" .
+                            '</a>';
+                    } else {
+                        echo ' <a class="nav-link" href="login.php">'
+                            . "Log In" .
+                            '</a>';
+                    }
+                    ?>
+                    
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="registar.php">Registration </a>
